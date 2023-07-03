@@ -29,5 +29,7 @@ HeroPower.create(hero_id: heroes2.id, power_id: powers2.id, strength: "Weak")
 HeroPower.create(hero_id: heroes1.id, power_id: powers3.id, strength: "Strong")
 HeroPower.create(hero_id: heroes3.id, power_id: powers1.id, strength: "Average")
 HeroPower.create(hero_id: heroes4.id, power_id: powers3.id, strength: "Weak")
+HeroPower.create(hero_id: heroes4.id, power_id: powers3.id, strength: "Strong")
+
 
 puts "Done seeding!"
