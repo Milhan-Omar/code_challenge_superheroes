@@ -1,15 +1,6 @@
 class HeroPowersController < ApplicationController
   protect_from_forgery with: :null_session
   rescue_from ActiveRecord::RecordInvalid, with: :invalid_heropower_params
-
- # def index
- #  heropowers = HeroPower.all
- #  render json: heropowers, status: :ok
- # end
- # def show
- #  heropower = HeroPower.find(id: params[:id])
- #  render json: heropower, status: :ok 
- # end
  def create
   heropower = HeroPower.create!(heropower_params)
   hero = Hero.find(heropower_params[:hero_id])
