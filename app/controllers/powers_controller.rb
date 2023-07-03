@@ -12,12 +12,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :not_found_power
   power = Power.find(params[:id])
   render json: power, status: :ok
  end
- def update
-  power = Power.find(params[:id])
-  # puts(power)
-  power.update!(power_params)
-  render json: power, status: :ok
- end
+ 
  private
  def power_params
   params.permit(:description)
